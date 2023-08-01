@@ -78,7 +78,7 @@ function shareArticle(article) {
       const textToShare = `${article.headline}\n\n${article.summary}\n\nRead more at: ${article.link}`;
       if (navigator.share) {
         navigator.share({
-          title: "Shared Article from NewsPlanetAi",
+          title: "Shared Article from HelloFLA",
           text: textToShare
         })
         .then(() => console.log('Successful share'))

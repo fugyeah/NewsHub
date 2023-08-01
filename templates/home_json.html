@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewsPlanetAi: Global News Summarized by AI</title>
-    <meta name="description" content="Stay updated with world news using NewsPlanetAi. Our AI technology reads, categorizes, and summarizes news from numerous sources, giving you concise and balanced reports.">
+    <title>HelloFLA News: Florida Political News Summarized by AI</title>
+    <meta name="description" content="Stay updated with Florida Political News news using HelloFLAAi. Our AI technology reads, categorizes, and summarizes news from numerous sources, giving you concise and balanced reports.">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -53,13 +53,13 @@
             const timestamp = document.querySelector('#timestamp-' + articleID).innerText;
         
             // Static link to your website
-            const link = "https://www.newsplanetai.com";
+            const link = "https://www.hellofla.com";
 
             const textToShare = `${headline}\n\n${summary}\n\nRead more at: ${link}`;
 
             if (navigator.share) {
                 navigator.share({
-                    title: "Shared Article from NewsPlanetAi",  // customize this title if needed
+                    title: "Shared Article from HelloFLA AI",  // customize this title if needed
                     text: textToShare
                 })
                 .then(() => console.log('Successful share'))
@@ -126,7 +126,7 @@
         </div>
         
         <hr>
-        <h2 class="map-title">News around the Planet</h2>
+        <h2 class="map-title">News around Florida</h2>
         <div id="map-container" style="position:relative;">
             <script src="static\js\server_map.js"></script>
             <div id="tooltip" style="position: absolute; opacity: 0;"></div>
@@ -221,11 +221,11 @@
         <div class="row">
             <div class="col-md-12">
 
-                    <p>NewsPlanetAi is your personal AI-powered news assistant. We gather news from global sources, categorize them into relevant sections, and generate concise summaries using advanced AI technology. Every hour, we also provide a 'Super Summary' - a brief overview of the most important global events.</p>
+                    <p>HelloFLA AI is your personal AI-powered news assistant. We gather news from global sources, categorize them into relevant sections, and generate concise summaries using advanced AI technology. Every hour, we also provide a 'Super Summary' - a brief overview of the most important global events.</p>
 
                     <p>We aim to save you time and keep you informed by sifting through multiple news sources and providing balanced, objective summaries of global happenings.</p>
-                    <p>Our news sources include trusted outlets such as <a href='https://news.google.com/rss'>Google News</a>, <a href='http://feeds.bbci.co.uk/news/rss.xml'>BBC</a>, <a href='https://www.aljazeera.com/xml/rss/all.xml'>Al Jazeera</a>, <a href='https://www.scmp.com/rss/4/feed'>South China Morning Post</a>, <a href='https://timesofindia.indiatimes.com/rssfeedstopstories.cms'>Times of India</a>, <a href='https://www.arabnews.com/rss.xml'>Arab News</a>, <a href='https://www.allsides.com/rss/news'>AllSides</a>, <a href='https://www.nationalreview.com/feed/'>National Review</a>, <a href='https://www.politico.com/rss/politicopicks.xml'>Politico</a>, <a href='https://www.yahoo.com/news/rss'>Yahoo News</a>, <a href='https://feeds.bloomberg.com/markets/news.rss'>Bloomberg</a>,<a href='https://sports.yahoo.com/rss/'>Yahoo Sports</a>, <a href='https://www.space.com/feeds/all'>Space.com</a>, <a href='https://news.ycombinator.com/rss'>Hacker News</a>, <a href='http://feeds.arstechnica.com/arstechnica/index/'>Ars Technica</a>, <a href='https://www.nature.com/nature.rss'>Nature</a>, <a href='https://www.maritime-executive.com/articles.rss'>The Maritime Executive</a>, <a href='https://www.pravda.com.ua/eng/rss/view_news/'>Ukrayinska Pravda</a>, <a href='https://www.themoscowtimes.com/rss/news'>The Moscow Times</a>, <a href='https://www.understandingwar.org/feeds-publications.xml'>Institute for the Study of War</a></p>
-                    <p>Stay informed with NewsPlanetAi - your one-stop solution for efficient news reading.</p>
+                    <p>Our news sources include trusted outlets and blogs.</p>
+                    <p>Stay informed with HelloFLA AI - your one-stop solution for efficient news reading.</p>
                 </div>
             </div>
         </div>

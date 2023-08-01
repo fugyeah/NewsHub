@@ -1,7 +1,7 @@
 import os
 import configparser
 from datetime import datetime
-from flask import Flask, render_template
+from Flask import Flask, render_template
 import time
 import json
 from sentence_transformers import SentenceTransformer
@@ -50,36 +50,31 @@ retries_summarize_super_summary = config.getint('Retry', 'SummarizeSuperSummaryR
 wait_time_seconds_summarize_super_summary = config.getint('Retry', 'SummarizeSuperSummaryWaitTimeSeconds')
 # List of news sources
 sources = [
-    ("http://feeds.bbci.co.uk/news/rss.xml", 3),
-    ("https://rss.jpost.com/rss/rssfeedsfrontpage.aspx", 2),
-    ("https://www.aljazeera.com/xml/rss/all.xml", 3),
-    ("https://www.scmp.com/rss/4/feed", 2),
-    ("https://rss.dw.com/rdf/rss-en-all", 3),
-    ("https://timesofindia.indiatimes.com/rssfeedstopstories.cms", 2),
-    ("https://www.arabnews.com/rss.xml", 2),
-    ("https://mg.co.za/feed/", 2),
-    ("https://batimes.com.ar/feed", 1),
-    ("https://soranews24.com/feed/", 3),
-    ("https://www.japantimes.co.jp/feed", 3),
-    ("https://www.riotimesonline.com/feed/", 3),
-    ("http://feeds.bbci.co.uk/news/world/latin_america/rss.xml", 3),
-    ("https://www.cbc.ca/cmlink/rss-canada",3),
-    ("https://www.allsides.com/rss/news", 3),
-    ("https://www.nationalreview.com/feed/", 5),
-    ("https://rss.upi.com/news/news.rss", 3),
-    ("https://www.politico.com/rss/politicopicks.xml", 5),
-    ("https://www.yahoo.com/news/rss",5),
-    ("https://sports.yahoo.com/rss/", 3),
-    ("https://news.google.com/rss", 5),
-    ("https://www.space.com/feeds/all", 5),
-    ("https://feeds.bloomberg.com/markets/news.rss", 5),
-    ("https://phys.org/rss-feed/breaking/", 5),
-    ("http://feeds.arstechnica.com/arstechnica/index/", 3),
-    ("http://rss.sciam.com/ScientificAmerican-Global", 3),
-    ("https://www.maritime-executive.com/articles.rss", 3),
-    ("https://www.pravda.com.ua/eng/rss/view_news/", 5),
-    ("https://www.themoscowtimes.com/rss/news", 3),
-    ("https://www.understandingwar.org/feeds-publications.xml", 2)
+    ("https://www.baynews9.com/services/contentfeed.fl%7Ctampa%7Cpolitics.hero.rss", 3),
+    ("https://feeder-prod.int.politico.com/feeds/rss/politicoflorida.xml", 2),
+    ("https://floridapolitics.com/feed/", 3),
+    ("https://www.politicalcortadito.com/feed/", 2),
+    ("https://www.blogger.com/feeds/6932198920118082868/posts/default", 3),
+    ("https://thefloridasqueeze.com/feed/", 2),
+    ("https://www.floridapoliticalreview.com/feed/", 2),
+    ("https://thefloridapundit.com/category/politics/feed/", 2),
+    ("https://www.nbcmiami.com/news/politics/feed/", 1),
+    ("https://www.wfla.com/news/politics/feed/", 3),
+    ("https://feeds.mcclatchy.com/miamiherald/sections/news/politics-government/state-politics/stories", 3),
+    ("https://www.flsenate.gov/Tracker/RSS/DailyCalendar", 3),
+    ("https://www.flsenate.gov/Tracker/RSS/Video", 3),
+    ("https://www.flsenate.gov/Tracker/RSS/PressReleases",3),
+    ("https://www.floridadisaster.org/rss-morning-sitrep/?basic=true", 3),
+    ("https://www.floridadisaster.org/rss-NHC-tropical-weather-discussion/", 5),
+    ("https://www.govinfo.gov/rss/uscourts-flsd.xml", 3),
+    ("https://www.govinfo.gov/rss/uscourts-flnd.xml", 5),
+    ("https://floridasadventurecoast.com/feed/",5),
+    ("https://thefloridachannel.org/videos/feed/", 3),
+    ("https://www.omnycontent.com/d/playlist/a858b0a5-e5e6-4a14-9717-a70b010facc1/70fa6451-35ad-4b66-ba76-a93e00e6cbae/ce2e8a26-165b-4565-b1d8-a93e00e7df2a/podcast.rss", 5),
+    ("https://rotundapodcast.podomatic.com/rss2.xml", 5),
+    ("https://anchor.fm/s/5ce9855c/podcast/rss", 5),
+    ("https://anchor.fm/s/5024ce58/podcast/rss", 5),
+    ("https://feeds.fireside.fm/sunrise/rss", 3),
 ]
 
 from modules import scraper
